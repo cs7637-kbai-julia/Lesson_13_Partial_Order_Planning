@@ -1,5 +1,5 @@
 # Lesson_13_Planning_Partial_Goals in Julia
-Planning with partial goals and assembling final plan from partial plans
+## Planning with partial goals and assembling final plan from partial plans
 
 Task: write a program to produce an action plan to achive a complex goal
 
