@@ -9,8 +9,8 @@ Restrictions: robot can not climb a painted ladder
 ## Excerpts from the debug log of the program
 generated partial plans:
 
-`Partial Plan1 condition: {Ladder Painted} - PlanStep[paint_ladder]
-Partial Plan2 condition: {Ceiling Painted} - PlanStep[climb_ladder, paint_ceiling]`
+`Partial Plan1 condition: {Ladder Painted} - PlanStep[paint_ladder]`
+`Partial Plan2 condition: {Ceiling Painted} - PlanStep[climb_ladder, paint_ceiling]`
 
 attempt to merge Partial Plan1 + Partial Plan2: not possible, because plan1 ends with painted ladder and robot can not continue with climbing the ladder to paint the celing due to restriction above
 
