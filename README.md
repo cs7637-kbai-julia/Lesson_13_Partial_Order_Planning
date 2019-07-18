@@ -21,4 +21,5 @@ attempt to merge Partial Plan1 + Partial Plan2: not possible, because plan1 ends
 attempt to merge Partial Plan2 + Partial Plan1: not possible, because end of plan2 does not agree with plan1's first step
 
 attempt to build a bridge between Partial Plan2 and Partial Plan1: program finds a solution with bridging the gap
+
 `Plan condition(complete): {[Ceiling Painted <And> Ladder Painted]} - PlanStep[climb_ladder, paint_ceiling, descend_ladder, paint_ladder]`
