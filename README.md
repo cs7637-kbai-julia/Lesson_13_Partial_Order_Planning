@@ -2,8 +2,11 @@
 Planning with partial goals and assembling final plan from partial plans
 
 Task: write a program to produce an action plan to achive a complex goal
-Universe: robot, ladder, ceiling
+
+Universe: robot, ladder, floor, ceiling
+
 Actions: climb_ladder, descend_ladder, paint_ladder, paint_ceiling
+
 Restrictions: robot can not climb a painted ladder
 
 ## Excerpts from the debug log of the program
