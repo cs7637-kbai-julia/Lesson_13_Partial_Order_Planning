@@ -1,4 +1,4 @@
-# Lesson 13: Planning through Partial Goals in Julia
+# Lesson 13: Partial Order Planning in Julia
 ### Planning with partial goals and assembling final plan from partial plans
 
 Task: write a program to produce an action plan to achive a complex goal by generating partial plans for partial goals and assemble partial plans into a complete plan
@@ -26,7 +26,9 @@ attempt to build a bridge between Partial Plan2 and Partial Plan1: program finds
 ### TODO
 - externalize universe as a separate database, and do simulations on the partial copy within the program
 - separate the restrictions of `robot can not climb painted ladder` into a separate condition like the `goal_status`
-- check final plans for loops and remove
+- check final plans for inner loop and remove if found (same hash value of universe at two plan steps)
 - assign cost to each action and evaluate final and/or partial plans for minimal cost
 - choose a recommended plan from final plans based on their cost
 - introduce more plan growing variations: e.g. `partial plan1`+`<bridging steps>` -> `goal_state`
+- Detecting conflicts between partial goals: promote pp2's partial goal over pp1's partial goal if precondition of any operator in pp2 is clobbered by a state in pp1. So at assembly start with pp2 and try to bridge it with pp1, eliminate the need of trying pp1+pp2.
+- assembling partial plans can be totally wrong, because they start off from a common initial status, but after chosing one for start, the others might become invalid because of the status changes by the first part, so bridging the first with the second might not even possible without undoing first partial goal. To overcome this, you might generate all partial plans, choose one, then from the end of the part one generate all partial plans for the remaining partial goals, choose next one, etc.
